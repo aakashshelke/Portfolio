@@ -68,7 +68,7 @@ const Hero = () => {
             options={{
               strings: [currentContent.description],
               autoStart: true,
-              loop: false,
+              loop: true,
               delay: 50,
             }}
           />
