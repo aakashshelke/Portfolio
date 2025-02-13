@@ -80,17 +80,17 @@ const Experience = () => {
   return (
     <section id="experience" className="section-padding">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">{currentContent.title}</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">{currentContent.title}</h2>
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-[50%] top-0 bottom-0 w-0.5 bg-white/10" />
+          <div className="absolute left-[50%] top-0 bottom-0 w-0.5 bg-white/10 hidden md:block" />
 
           {/* Experience Items */}
           <div className="space-y-12">
             {currentContent.experiences.map((exp, index) => (
-              <div key={index} className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                <div className="w-1/2 flex justify-center">
-                  <div className="glass-card p-8 rounded-lg hover-scale w-full">
+              <div key={index} className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                <div className="w-full md:w-1/2 flex justify-center">
+                  <div className="glass-card p-6 rounded-lg hover-scale w-full">
                     <div className="flex items-center gap-4 mb-4">
                       <BriefcaseIcon className="w-6 h-6 text-primary" />
                       <div>
@@ -106,15 +106,15 @@ const Experience = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="w-4 h-4 bg-primary rounded-full relative z-10" />
-                <div className="w-1/2" />
+                <div className="w-4 h-4 bg-primary rounded-full relative z-10 hidden md:block" />
+                <div className="w-full md:w-1/2" />
               </div>
             ))}
 
             {/* Education Timeline Point */}
-            <div className="flex items-center gap-8">
-              <div className="w-1/2 flex justify-center">
-                <div className="glass-card p-8 rounded-lg hover-scale w-full">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="glass-card p-6 rounded-lg hover-scale w-full">
                   <div className="flex items-center gap-4 mb-4">
                     <GraduationCapIcon className="w-6 h-6 text-primary" />
                     <div>
@@ -128,8 +128,8 @@ const Experience = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-4 h-4 bg-primary rounded-full relative z-10" />
-              <div className="w-1/2" />
+              <div className="w-4 h-4 bg-primary rounded-full relative z-10 hidden md:block" />
+              <div className="w-full md:w-1/2" />
             </div>
           </div>
         </div>
